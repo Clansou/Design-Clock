@@ -1,5 +1,19 @@
 const color = "green";
 
+function calculateCoordinates(canvasWidth, canvasHeight) {
+    const xOffset = canvasWidth * 0.2; // Décalage horizontal
+    const yOffset = canvasHeight * 0.2; // Décalage vertical
+    const width = canvasWidth * 0.6; // Largeur du chiffre
+    const height = canvasHeight * 0.6; // Hauteur du chiffre
+
+    return { xOffset, yOffset, width, height };
+}
+
+function fillColor(ctx){
+    ctx.stroke();
+    ctx.fillStyle = color;
+    ctx.fill();
+}
 
 export function DrawZero(ctx, canvasWidth, canvasHeight){
     const container = document.getElementById('canvas'); // Remplacez 'canvas-container' par l'ID de votre conteneur de canevas
@@ -33,11 +47,8 @@ export function DrawZero(ctx, canvasWidth, canvasHeight){
 
 
 export function DrawOne(ctx, canvasWidth, canvasHeight){
-    // Calcul des nouvelles coordonnées en fonction de la taille du canvas
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
+
 
     ctx.beginPath();
     ctx.moveTo(xOffset + width * 0.3, yOffset); // Point de départ
@@ -47,17 +58,12 @@ export function DrawOne(ctx, canvasWidth, canvasHeight){
     ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.2);
     ctx.lineTo(xOffset + width * 0.3, yOffset + height * 0.2);
     ctx.lineTo(xOffset + width * 0.3, yOffset); // Retour au point de départ
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
+    fillColor(ctx);
 }
 
 export function DrawTwo(ctx, canvasWidth, canvasHeight){
     // Calcul des nouvelles coordonnées en fonction de la taille du canvas
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
 
     ctx.beginPath();
     ctx.moveTo(xOffset, yOffset); // Point de départ
@@ -75,17 +81,12 @@ export function DrawTwo(ctx, canvasWidth, canvasHeight){
     ctx.lineTo(xOffset, yOffset);
 
 
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
+    fillColor(ctx);
 }
 
 export function DrawThree(ctx, canvasWidth, canvasHeight){
     // Calcul des nouvelles coordonnées en fonction de la taille du canvas
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
 
     ctx.beginPath();
     ctx.moveTo(xOffset, yOffset); // Point de départ
@@ -104,9 +105,9 @@ export function DrawThree(ctx, canvasWidth, canvasHeight){
 
 
 
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
+    fillColor(ctx);
 }
+
+
 
 
