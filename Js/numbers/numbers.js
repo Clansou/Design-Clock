@@ -108,6 +108,32 @@ export function DrawThree(ctx, canvasWidth, canvasHeight){
     fillColor(ctx);
 }
 
+export function DrawFour(ctx, canvasWidth, canvasHeight){
+    // Calcul des nouvelles coordonnées en fonction de la taille du canvas
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset + width * 0.05, yOffset); // Point de départ
+    ctx.lineTo(xOffset + width * 0.2, yOffset); 
+    ctx.lineTo(xOffset + width * 0.2, yOffset + height * 0.45); 
+    ctx.lineTo(xOffset + width * 0.45, yOffset + height * 0.45); 
+    ctx.lineTo(xOffset + width * 0.45, yOffset + height * 0.1); 
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.1); 
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.45); 
+    ctx.lineTo(xOffset + width * 0.95, yOffset + height * 0.45); 
+    ctx.lineTo(xOffset + width * 0.95, yOffset + height * 0.6); 
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.6); 
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height); 
+    ctx.lineTo(xOffset + width * 0.45, yOffset + height); 
+    ctx.lineTo(xOffset + width * 0.45, yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.05, yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.05,yOffset);
+
+
+
+    fillColor(ctx);
+}
+
 
 
 
