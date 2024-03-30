@@ -80,140 +80,33 @@ export function DrawTwo(ctx, canvasWidth, canvasHeight){
     ctx.fill();
 }
 
-
-
-// Fonction pour dessiner le chiffre 3
 export function DrawThree(ctx, canvasWidth, canvasHeight){
+    // Calcul des nouvelles coordonnées en fonction de la taille du canvas
     const xOffset = canvasWidth * 0.2; // Décalage horizontal
     const yOffset = canvasHeight * 0.2; // Décalage vertical
     const width = canvasWidth * 0.6; // Largeur du chiffre
     const height = canvasHeight * 0.6; // Hauteur du chiffre
 
     ctx.beginPath();
-    ctx.moveTo(xOffset + width * 0.2, yOffset); // Point de départ
+    ctx.moveTo(xOffset, yOffset); // Point de départ
     ctx.lineTo(xOffset + width, yOffset); // Ligne horizontale supérieure
-    ctx.lineTo(xOffset + width, yOffset + height * 0.5); // Ligne horizontale centrale
-    ctx.lineTo(xOffset + width * 0.2, yOffset + height * 0.5); // Ligne diagonale
     ctx.lineTo(xOffset + width, yOffset + height);
     ctx.lineTo(xOffset, yOffset + height);
+    ctx.lineTo(xOffset, yOffset + height * 0.8);
+    ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.8);
+    ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.3, yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.3, yOffset + height * 0.4);
+    ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.4);
+    ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.2);
+    ctx.lineTo(xOffset, yOffset + height * 0.2);
     ctx.lineTo(xOffset, yOffset);
+
+
+
     ctx.stroke();
     ctx.fillStyle = color;
     ctx.fill();
 }
-
-// Les fonctions pour les chiffres restants suivent le même schéma, mais avec des modifications appropriées pour chaque chiffre.
-// Voici juste les fonctions pour les chiffres restants :
-
-// Fonction pour dessiner le chiffre 4
-export function DrawFour(ctx, canvasWidth, canvasHeight){
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
-
-    ctx.beginPath();
-    ctx.moveTo(xOffset + width * 0.8, yOffset);
-    ctx.lineTo(xOffset + width * 0.8, yOffset + height);
-    ctx.moveTo(xOffset, yOffset + height * 0.5);
-    ctx.lineTo(xOffset + width, yOffset + height * 0.5);
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
-}
-
-// Fonction pour dessiner le chiffre 5
-export function DrawFive(ctx, canvasWidth, canvasHeight){
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
-
-    ctx.beginPath();
-    ctx.moveTo(xOffset + width, yOffset);
-    ctx.lineTo(xOffset, yOffset);
-    ctx.lineTo(xOffset, yOffset + height * 0.5);
-    ctx.lineTo(xOffset + width, yOffset + height * 0.5);
-    ctx.lineTo(xOffset + width, yOffset + height);
-    ctx.lineTo(xOffset, yOffset + height);
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
-}
-
-// Fonction pour dessiner le chiffre 6
-export function DrawSix(ctx, canvasWidth, canvasHeight){
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
-
-    ctx.beginPath();
-    ctx.moveTo(xOffset, yOffset + height);
-    ctx.lineTo(xOffset, yOffset);
-    ctx.lineTo(xOffset + width, yOffset);
-    ctx.lineTo(xOffset + width, yOffset + height * 0.5);
-    ctx.lineTo(xOffset, yOffset + height * 0.5);
-    ctx.lineTo(xOffset + width, yOffset + height);
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
-}
-
-// Fonction pour dessiner le chiffre 7
-export function DrawSeven(ctx, canvasWidth, canvasHeight){
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
-
-    ctx.beginPath();
-    ctx.moveTo(xOffset, yOffset);
-    ctx.lineTo(xOffset + width, yOffset);
-    ctx.lineTo(xOffset, yOffset + height);
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
-}
-
-// Fonction pour dessiner le chiffre 8
-export function DrawEight(ctx, canvasWidth, canvasHeight){
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
-
-    ctx.beginPath();
-    ctx.moveTo(xOffset, yOffset);
-    ctx.lineTo(xOffset + width, yOffset);
-    ctx.lineTo(xOffset + width, yOffset + height);
-    ctx.lineTo(xOffset, yOffset + height);
-    ctx.lineTo(xOffset, yOffset);
-    ctx.moveTo(xOffset, yOffset + height * 0.5);
-    ctx.lineTo(xOffset + width, yOffset + height * 0.5);
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
-}
-
-// Fonction pour dessiner le chiffre 9
-export function DrawNine(ctx, canvasWidth, canvasHeight){
-    const xOffset = canvasWidth * 0.2; // Décalage horizontal
-    const yOffset = canvasHeight * 0.2; // Décalage vertical
-    const width = canvasWidth * 0.6; // Largeur du chiffre
-    const height = canvasHeight * 0.6; // Hauteur du chiffre
-
-    ctx.beginPath();
-    ctx.moveTo(xOffset + width, yOffset);
-    ctx.lineTo(xOffset, yOffset);
-    ctx.lineTo(xOffset, yOffset + height * 0.5);
-    ctx.lineTo(xOffset + width, yOffset + height * 0.5);
-    ctx.lineTo(xOffset + width, yOffset + height);
-    ctx.lineTo(xOffset, yOffset + height);
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
-}
-
 
 
