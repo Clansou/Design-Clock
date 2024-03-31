@@ -1,4 +1,7 @@
 const color = "green";
+    const container = document.getElementById('canvas'); // Remplacez 'canvas-container' par l'ID de votre conteneur de canevas
+    const containerStyle = window.getComputedStyle(container);
+    const backgroundColor = containerStyle.backgroundColor;
 
 function calculateCoordinates(canvasWidth, canvasHeight) {
     const xOffset = canvasWidth * 0.2; // Décalage horizontal
@@ -16,9 +19,6 @@ function fillColor(ctx){
 }
 
 export function DrawZero(ctx, canvasWidth, canvasHeight){
-    const container = document.getElementById('canvas'); // Remplacez 'canvas-container' par l'ID de votre conteneur de canevas
-    const containerStyle = window.getComputedStyle(container);
-    const backgroundColor = containerStyle.backgroundColor;
 
     const xOffset = canvasWidth * 0.3; // Décalage horizontal
     const yOffset = canvasHeight * 0.2; // Décalage vertical
@@ -154,6 +154,34 @@ export function DrawFive(ctx, canvasWidth, canvasHeight){
     ctx.lineTo(xOffset + width, yOffset);
 
     fillColor(ctx);
+}
+
+
+export function DrawSix(ctx, canvasWidth, canvasHeight){
+    // Calcul des nouvelles coordonnées en fonction de la taille du canvas
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset + width * 0.1, yOffset); // Point de départ
+    ctx.lineTo(xOffset + width * 0.9, yOffset); // Ligne horizontale supérieure
+    ctx.lineTo(xOffset + width * 0.9, yOffset +height* 0.2);
+    ctx.lineTo(xOffset + width * 0.3, yOffset +height* 0.2);
+    ctx.lineTo(xOffset + width * 0.3, yOffset +height* 0.4);
+    ctx.lineTo(xOffset + width * 0.9, yOffset +height* 0.4);
+    ctx.lineTo(xOffset + width * 0.9, yOffset +height);
+    ctx.lineTo(xOffset + width * 0.1, yOffset +height);
+    ctx.lineTo(xOffset + width * 0.1, yOffset);
+    fillColor(ctx);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset +width*0.3, yOffset+height*0.6);
+    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.6);
+    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.8);
+    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.8);
+    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.6);
+    ctx.stroke();
+    ctx.fillStyle = backgroundColor;
+    ctx.fill()
 }
 
 
