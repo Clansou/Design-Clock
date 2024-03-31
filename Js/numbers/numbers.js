@@ -53,13 +53,13 @@ export function DrawOne(ctx, canvasWidth, canvasHeight){
 
 
     ctx.beginPath();
-    ctx.moveTo(xOffset + width * 0.3, yOffset); // Point de départ
-    ctx.lineTo(xOffset + width * 0.8, yOffset); // Ligne horizontale
+    ctx.moveTo(xOffset + width * 0.8, yOffset); // Point de départ
     ctx.lineTo(xOffset + width * 0.8, yOffset + height);
     ctx.lineTo(xOffset + width * 0.6, yOffset + height);
-    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.2);
-    ctx.lineTo(xOffset + width * 0.3, yOffset + height * 0.2);
-    ctx.lineTo(xOffset + width * 0.3, yOffset); // Retour au point de départ
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.3);
+    ctx.lineTo(xOffset + width * 0.4, yOffset + height * 0.4);
+    ctx.lineTo(xOffset + width * 0.4, yOffset + height * 0.25);
+    ctx.lineTo(xOffset + width * 0.8, yOffset);
     fillColor(ctx);
 }
 

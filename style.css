@@ -1,0 +1,15 @@
+canvas{
+    background-color: #3f3f3f;
+    transition: background-color 0.5s ease;
+
+}
+div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+body{
+    background-color: #333;
+}
