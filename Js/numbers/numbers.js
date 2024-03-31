@@ -134,6 +134,27 @@ export function DrawFour(ctx, canvasWidth, canvasHeight){
     fillColor(ctx);
 }
 
+export function DrawFive(ctx, canvasWidth, canvasHeight){
+    // Calcul des nouvelles coordonnées en fonction de la taille du canvas
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset + width, yOffset); // Point de départ
+    ctx.lineTo(xOffset , yOffset); // Ligne horizontale supérieure
+    ctx.lineTo(xOffset , yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.8, yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.8, yOffset + height * 0.8);
+    ctx.lineTo(xOffset, yOffset + height * 0.8);
+    ctx.lineTo(xOffset, yOffset + height);
+    ctx.lineTo(xOffset + width, yOffset + height);
+    ctx.lineTo(xOffset + width, yOffset + height * 0.4);
+    ctx.lineTo(xOffset + width * 0.2, yOffset + height * 0.4);
+    ctx.lineTo(xOffset + width * 0.2, yOffset + height * 0.2);
+    ctx.lineTo(xOffset + width, yOffset + height * 0.2);
+    ctx.lineTo(xOffset + width, yOffset);
+
+    fillColor(ctx);
+}
 
 
 
