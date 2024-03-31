@@ -1,6 +1,8 @@
 import { DrawZero, DrawOne, DrawTwo, DrawThree,DrawFour,DrawFive,DrawSix,DrawSeven,DrawEight,DrawNine,DrawColon } from './numbers.js';
 
 export function DrawNumber(ctx, canva, hourNumber) {
+    ctx.clearRect(0, 0, canva.width, canva.height);
+
     switch (hourNumber) {
         case '0':
             DrawZero(ctx, canva.width, canva.height);
