@@ -4,9 +4,9 @@ export function getDate() {
     let minutes = todayDate.getMinutes().toString().padStart(2, '0');
     // Retourner les chiffres
     return {
-        hoursTens: hours[0],
-        hoursOnes: hours[1],
-        minutesTens: minutes[0],
-        minutesOnes: minutes[1]
+        0: hours[0],
+        1: hours[1],
+        2: minutes[0],
+        3: minutes[1]
     };
 }
