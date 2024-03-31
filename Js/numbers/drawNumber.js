@@ -1,4 +1,4 @@
-import { DrawZero, DrawOne, DrawTwo, DrawThree,DrawFour,DrawFive,DrawSix,DrawSeven,DrawEight,DrawNine } from './numbers.js';
+import { DrawZero, DrawOne, DrawTwo, DrawThree,DrawFour,DrawFive,DrawSix,DrawSeven,DrawEight,DrawNine,DrawColon } from './numbers.js';
 
 export function DrawNumber(ctx, canva, hourNumber) {
     switch (hourNumber) {
@@ -31,6 +31,9 @@ export function DrawNumber(ctx, canva, hourNumber) {
             break;
         case '9':
             DrawNine(ctx, canva.width, canva.height);;
+            break;
+        case ':':
+            DrawColon(ctx, canva.width, canva.height);;
             break;
         default:
             console.log('Chiffre non reconnu');

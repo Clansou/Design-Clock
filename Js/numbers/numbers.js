@@ -166,21 +166,21 @@ export function DrawSix(ctx, canvasWidth, canvasHeight){
     ctx.beginPath();
     ctx.moveTo(xOffset + width * 0.1, yOffset); // Point de départ
     ctx.lineTo(xOffset + width * 0.9, yOffset); // Ligne horizontale supérieure
-    ctx.lineTo(xOffset + width * 0.9, yOffset +height* 0.2);
-    ctx.lineTo(xOffset + width * 0.3, yOffset +height* 0.2);
-    ctx.lineTo(xOffset + width * 0.3, yOffset +height* 0.4);
-    ctx.lineTo(xOffset + width * 0.9, yOffset +height* 0.4);
-    ctx.lineTo(xOffset + width * 0.9, yOffset +height);
-    ctx.lineTo(xOffset + width * 0.1, yOffset +height);
+    ctx.lineTo(xOffset + width * 0.9, yOffset + height* 0.2);
+    ctx.lineTo(xOffset + width * 0.3, yOffset + height* 0.2);
+    ctx.lineTo(xOffset + width * 0.3, yOffset + height* 0.4);
+    ctx.lineTo(xOffset + width * 0.9, yOffset + height* 0.4);
+    ctx.lineTo(xOffset + width * 0.9, yOffset + height);
+    ctx.lineTo(xOffset + width * 0.1, yOffset + height);
     ctx.lineTo(xOffset + width * 0.1, yOffset);
     fillColor(ctx);
 
     ctx.beginPath();
-    ctx.moveTo(xOffset +width*0.3, yOffset+height*0.6);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.6);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.8);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.8);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.6);
+    ctx.moveTo(xOffset + width*0.3, yOffset + height*0.6);
+    ctx.lineTo(xOffset + width*0.7, yOffset + height*0.6);
+    ctx.lineTo(xOffset + width*0.7, yOffset + height*0.8);
+    ctx.lineTo(xOffset + width*0.3, yOffset + height*0.8);
+    ctx.lineTo(xOffset + width*0.3, yOffset + height*0.6);
     fillBackgroundColor(ctx);
 }
 
@@ -213,7 +213,7 @@ export function DrawEight(ctx, canvasWidth, canvasHeight){
     const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
 
     ctx.beginPath();
-    ctx.moveTo(xOffset +width * 0.1, yOffset); // Point de départ
+    ctx.moveTo(xOffset + width * 0.1, yOffset); // Point de départ
     ctx.lineTo(xOffset + width * 0.9, yOffset); // Ligne horizontale supérieure
     ctx.lineTo(xOffset + width * 0.9, yOffset + height);
     ctx.lineTo(xOffset + width * 0.1, yOffset + height);
@@ -221,19 +221,19 @@ export function DrawEight(ctx, canvasWidth, canvasHeight){
     fillColor(ctx);
 
     ctx.beginPath();
-    ctx.moveTo(xOffset +width*0.3, yOffset+height*0.2);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.2);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.4);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.4);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.2);
+    ctx.moveTo(xOffset + width*0.3, yOffset + height*0.2);
+    ctx.lineTo(xOffset + width*0.7, yOffset + height*0.2);
+    ctx.lineTo(xOffset + width*0.7, yOffset + height*0.4);
+    ctx.lineTo(xOffset + width*0.3, yOffset + height*0.4);
+    ctx.lineTo(xOffset + width*0.3, yOffset + height*0.2);
     fillBackgroundColor(ctx);
 
     ctx.beginPath();
-    ctx.moveTo(xOffset +width*0.3, yOffset+height*0.6);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.6);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.8);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.8);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.6);
+    ctx.moveTo(xOffset + width*0.3, yOffset+ height*0.6);
+    ctx.lineTo(xOffset + width*0.7, yOffset+ height*0.6);
+    ctx.lineTo(xOffset + width*0.7, yOffset+ height*0.8);
+    ctx.lineTo(xOffset + width*0.3, yOffset+ height*0.8);
+    ctx.lineTo(xOffset + width*0.3, yOffset+ height*0.6);
     fillBackgroundColor(ctx);
 }
 
@@ -244,8 +244,8 @@ export function DrawNine(ctx, canvasWidth, canvasHeight){
     ctx.beginPath();
     ctx.moveTo(xOffset + width * 0.1, yOffset); // Point de départ
     ctx.lineTo(xOffset + width * 0.9, yOffset); // Ligne horizontale supérieure
-    ctx.lineTo(xOffset + width * 0.9, yOffset +height);
-    ctx.lineTo(xOffset + width * 0.1, yOffset +height);
+    ctx.lineTo(xOffset + width * 0.9, yOffset + height);
+    ctx.lineTo(xOffset + width * 0.1, yOffset + height);
     ctx.lineTo(xOffset + width * 0.1, yOffset + height * 0.8);
     ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.8);
     ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.6);
@@ -254,12 +254,33 @@ export function DrawNine(ctx, canvasWidth, canvasHeight){
     fillColor(ctx);
 
     ctx.beginPath();
-    ctx.moveTo(xOffset +width*0.3, yOffset+height*0.2);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.2);
-    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.4);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.4);
-    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.2);
+    ctx.moveTo(xOffset + width*0.3, yOffset + height*0.2);
+    ctx.lineTo(xOffset + width*0.7, yOffset + height*0.2);
+    ctx.lineTo(xOffset + width*0.7, yOffset + height*0.4);
+    ctx.lineTo(xOffset + width*0.3, yOffset + height*0.4);
+    ctx.lineTo(xOffset + width*0.3, yOffset + height*0.2);
     fillBackgroundColor(ctx);
+}
+
+export function DrawColon(ctx, canvasWidth, canvasHeight){
+    // Calcul des nouvelles coordonnées en fonction de la taille du canvas
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset + width * 0.4, yOffset + height * 0.2); // Point de départ
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.2); // Ligne horizontale supérieure
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.4);
+    ctx.lineTo(xOffset + width * 0.4, yOffset + height * 0.4);
+    ctx.lineTo(xOffset + width * 0.4, yOffset + height * 0.2);
+    fillColor(ctx);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset + width * 0.4, yOffset + height * 0.6); // Point de départ
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.6); // Ligne horizontale supérieure
+    ctx.lineTo(xOffset + width * 0.6, yOffset + height * 0.8);
+    ctx.lineTo(xOffset + width * 0.4, yOffset + height * 0.8);
+    ctx.lineTo(xOffset + width * 0.4, yOffset + height * 0.6);
+    fillColor(ctx);
 }
 
 

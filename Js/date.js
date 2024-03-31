@@ -6,7 +6,8 @@ export function getDate() {
     return {
         0: hours[0],
         1: hours[1],
-        2: minutes[0],
-        3: minutes[1]
+        2: ":",
+        3: minutes[0],
+        4: minutes[1]
     };
 }
