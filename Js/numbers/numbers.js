@@ -18,6 +18,12 @@ function fillColor(ctx){
     ctx.fill();
 }
 
+function fillBackgroundColor(ctx){
+    ctx.stroke();
+    ctx.fillStyle = backgroundColor;
+    ctx.fill();
+}
+
 export function DrawZero(ctx, canvasWidth, canvasHeight){
     const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
 
@@ -36,9 +42,7 @@ export function DrawZero(ctx, canvasWidth, canvasHeight){
     ctx.lineTo(xOffset +width*0.7, yOffset+height*0.8);
     ctx.lineTo(xOffset +width*0.3, yOffset+height*0.8);
     ctx.lineTo(xOffset +width*0.3, yOffset+height*0.2);
-    ctx.stroke();
-    ctx.fillStyle = backgroundColor;
-    ctx.fill()
+    fillBackgroundColor(ctx);
 
 }
 
@@ -177,9 +181,7 @@ export function DrawSix(ctx, canvasWidth, canvasHeight){
     ctx.lineTo(xOffset +width*0.7, yOffset+height*0.8);
     ctx.lineTo(xOffset +width*0.3, yOffset+height*0.8);
     ctx.lineTo(xOffset +width*0.3, yOffset+height*0.6);
-    ctx.stroke();
-    ctx.fillStyle = backgroundColor;
-    ctx.fill()
+    fillBackgroundColor(ctx);
 }
 
 
