@@ -237,5 +237,31 @@ export function DrawEight(ctx, canvasWidth, canvasHeight){
     fillBackgroundColor(ctx);
 }
 
+export function DrawNine(ctx, canvasWidth, canvasHeight){
+    // Calcul des nouvelles coordonnées en fonction de la taille du canvas
+    const { xOffset, yOffset, width, height } = calculateCoordinates(canvasWidth, canvasHeight);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset + width * 0.1, yOffset); // Point de départ
+    ctx.lineTo(xOffset + width * 0.9, yOffset); // Ligne horizontale supérieure
+    ctx.lineTo(xOffset + width * 0.9, yOffset +height);
+    ctx.lineTo(xOffset + width * 0.1, yOffset +height);
+    ctx.lineTo(xOffset + width * 0.1, yOffset + height * 0.8);
+    ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.8);
+    ctx.lineTo(xOffset + width * 0.7, yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.1, yOffset + height * 0.6);
+    ctx.lineTo(xOffset + width * 0.1, yOffset);
+    fillColor(ctx);
+
+    ctx.beginPath();
+    ctx.moveTo(xOffset +width*0.3, yOffset+height*0.2);
+    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.2);
+    ctx.lineTo(xOffset +width*0.7, yOffset+height*0.4);
+    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.4);
+    ctx.lineTo(xOffset +width*0.3, yOffset+height*0.2);
+    fillBackgroundColor(ctx);
+}
+
+
 
 
