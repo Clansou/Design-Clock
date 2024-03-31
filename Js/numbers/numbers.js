@@ -1,6 +1,6 @@
 const color = "green";
-    const container = document.getElementById('canvas'); // Remplacez 'canvas-container' par l'ID de votre conteneur de canevas
-    const containerStyle = window.getComputedStyle(container);
+    const container = document.getElementsByClassName('canvas'); // Remplacez 'canvas-container' par l'ID de votre conteneur de canevas
+    const containerStyle = window.getComputedStyle(container[0]);
     const backgroundColor = containerStyle.backgroundColor;
 
 function calculateCoordinates(canvasWidth, canvasHeight) {
